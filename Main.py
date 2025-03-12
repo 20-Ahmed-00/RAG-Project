@@ -20,10 +20,10 @@ from langchain_community.document_loaders import DirectoryLoader
 from charset_normalizer import detect as charset_detect
 
 # Paths
-CHUNK_DIR = os.path.abspath(r"C:\Program Files\Projects\datasets\göçteyim\parsedData\chunkData")
-METADATA_PATH = os.path.abspath(r"C:\Program Files\Projects\datasets\göçteyim\parsedData\chunkData\chunk_metadata.json")
-VECTOR_STORE_PATH = os.path.abspath(r"C:\Users\20ahm\Desktop\vector_store")
-WORD_INDEX_PATH = os.path.abspath(r"C:\Users\20ahm\Desktop\word_index")
+CHUNK_DIR = ""
+METADATA_PATH = ""
+VECTOR_STORE_PATH = ""
+WORD_INDEX_PATH = ""
 
 print(f"Initial CHUNK_DIR: {CHUNK_DIR}")
 print(f"Initial METADATA_PATH: {METADATA_PATH}")
@@ -63,8 +63,7 @@ CONFIG = {
     "qa_similarity_threshold": 0.5    # Raised for stricter relevance
 }
 
-HF_TOKEN = os.environ.get("HF_TOKEN", "??????????????????????????")
-login(HF_TOKEN)
+# I have left out the Hugging Face Login part here to commit
 print("Logged in to Hugging Face.")
 
 # Device setup
